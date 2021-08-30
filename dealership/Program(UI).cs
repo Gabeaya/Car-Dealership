@@ -56,6 +56,7 @@ namespace Dealership
       {
         //Console.WriteLine(automobile.MakeModel);//then it returns our MakeModel property for each
         //we will replace the "MakeModel" now that it is private
+        Console.WriteLine(Car.MakeSound("bang"));//here we call on our static method and it lets you know one thing for all the cars
         Console.WriteLine("----------------------");
         Console.WriteLine(automobile.GetMakeModel());//these lines give all the automobile info to the user
         Console.WriteLine(automobile.GetMiles() + " miles");

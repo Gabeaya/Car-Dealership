@@ -22,6 +22,12 @@ namespace Dealership.Models//name it by the folder it is in then we use models f
     }//this constructor will return a new instance of Car
     //The purpose of using a constructor is to refactor our Program class
     
+    //all of our methods have been for the instance of the classes
+    //below is a method to call on the class directly
+    public static string MakeSound(string sound)// this will describe the sound that all the cars make not just instances of the car class
+    {
+      return "Our cars sound like " + sound;
+    }
     public void SetPrice(int newPrice) //this method will set discounted prices during sales for particluar cars
     {//we name is public so it can be publically accessed and denote void because it doesnt return a value
       _price = newPrice; //we set the argument as the new automobile price
