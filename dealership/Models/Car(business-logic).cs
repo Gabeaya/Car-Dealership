@@ -9,16 +9,37 @@ namespace Dealership.Models//name it by the folder it is in then we use models f
     //public string MakeModel; //these variables are known as fields 
     //public int Price;//fields are any variable declared within a class
     //public int Miles;//fields are written in PascalCase
-    // update our fieds to be privat
-    private string _makeModel; //now that the variables are private
-    private int _price;// we denote with camelCase and an underscore
-    private int _miles;
+    // update our fieds to be private
 
+    //we will replace the pricate strings with properties on line 32
+    // private string _makeModel; //now that the variables are private
+    // //lesson 10 example
+    // // public string MakeModel //tehPascalCase denotes this is a property
+    // // {
+    // //   get
+    // //   {
+    // //     return _makeModel;
+    // //   }
+    // //   set
+    // //   {
+    // //     _makeModel = value; //this is the value will be defined
+    // //   }
+    // // }
+    // private int _price;// we denote with camelCase and an underscore
+    // private int _miles;
+
+    public string MakeModel { get; set; }
+    public int Price { get; set; }
+    public int Miles { get; set; }
     public Car(string makeModel, int price, int miles)// we should name our constructor the same as the class its called on. our constructor containes multiple parameters
     {// our parameters correspond to the Car fields and they include a preceding type
-      _makeModel = makeModel; // we set the object fields equal to the parameters
-      _price = price;//note the fields are PascalCase 
-      _miles = miles;// note the parameters are lowerCamelCase
+      // now that our private fiedls are properties they need to be converted to PascalCase
+      MakeModel = makeModel;//the property is set equal to the parameters
+      Price = price;
+      Miles = miles;
+      // _makeModel = makeModel; // we set the object fields equal to the parameters
+      // _price = price;//note the fields are PascalCase 
+      // _miles = miles;// note the parameters are lowerCamelCase
     }//this constructor will return a new instance of Car
     //The purpose of using a constructor is to refactor our Program class
     
@@ -30,25 +51,25 @@ namespace Dealership.Models//name it by the folder it is in then we use models f
     }
     public void SetPrice(int newPrice) //this method will set discounted prices during sales for particluar cars
     {//we name is public so it can be publically accessed and denote void because it doesnt return a value
-      _price = newPrice; //we set the argument as the new automobile price
+      Price = newPrice; //we set the argument as the new automobile price
     }
     public string GetMakeModel()//this allows to make the returned variable publicly available but prevents it from being exposed
     {
-      return _makeModel;
+      return MakeModel;
     }
     //below we add more get methods for the remaining variables
     public int GetPrice()
     {
-      return _price;
+      return Price;
     }
 
     public int GetMiles()
     {
-      return _miles;
+      return Miles;
     }
     public bool WorthBuying(int maxPrice)// firstly we define type, bool, then delcar it only takes one argument
     {//methods within the class can only be called on said class
-      return (_price <= maxPrice); //our method returns whether true or false if the price is or isnt less/equal to the users maxprice
+      return (Price <= maxPrice); //our method returns whether true or false if the price is or isnt less/equal to the users maxprice
     }
   }//they are not properties but are exposed like properties with the public access modifier..this will change to private soon enough
 
@@ -105,5 +126,5 @@ namespace Dealership.Models//name it by the folder it is in then we use models f
   //       Console.WriteLine(automobile.MakeModel);//then it returns our MakeModel property for each
   //     }
   //   }
-  // }
+  
 }
