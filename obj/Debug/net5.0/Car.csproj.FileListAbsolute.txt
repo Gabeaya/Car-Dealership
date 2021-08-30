@@ -1,0 +1,15 @@
+/Users/taylorruis/Desktop/refactor-car-dealership/bin/Debug/net5.0/Car.deps.json
+/Users/taylorruis/Desktop/refactor-car-dealership/bin/Debug/net5.0/Car.runtimeconfig.json
+/Users/taylorruis/Desktop/refactor-car-dealership/bin/Debug/net5.0/Car.runtimeconfig.dev.json
+/Users/taylorruis/Desktop/refactor-car-dealership/bin/Debug/net5.0/Car.dll
+/Users/taylorruis/Desktop/refactor-car-dealership/bin/Debug/net5.0/ref/Car.dll
+/Users/taylorruis/Desktop/refactor-car-dealership/bin/Debug/net5.0/Car.pdb
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/Car.csprojAssemblyReference.cache
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/Car.GeneratedMSBuildEditorConfig.editorconfig
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/Car.AssemblyInfoInputs.cache
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/Car.AssemblyInfo.cs
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/Car.csproj.CoreCompileInputs.cache
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/Car.dll
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/ref/Car.dll
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/Car.pdb
+/Users/taylorruis/Desktop/refactor-car-dealership/obj/Debug/net5.0/Car.genruntimeconfig.cache
