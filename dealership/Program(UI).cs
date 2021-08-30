@@ -36,6 +36,8 @@ namespace Dealership
       List<Car> Cars = new List<Car>() { volkswagen, yugo, ford, amc}; //This creates a list of the type, class, Car
     // the list above is intantiated with the new List syntax and it contains all the instances of our Car class inside
       
+      //below we will use our setPrice method to change the ugo instance price
+      yugo.SetPrice(500);
       Console.WriteLine("Enter maximum price: ");//user is informed to enter a price
       string stringMaxPrice = Console.ReadLine();//variable equal to user response
       int maxPrice = int.Parse(stringMaxPrice);//variable, same name as our Worthbuying argument, equal to the int parse of the user response
@@ -52,8 +54,14 @@ namespace Dealership
       //foreach(Car automobile in Cars)//this loops through our car list
       foreach(Car automobile in CarsMatchingSearch)//weve updated the loop to only include cars user can affod
       {
-        Console.WriteLine(automobile.MakeModel);//then it returns our MakeModel property for each
+        //Console.WriteLine(automobile.MakeModel);//then it returns our MakeModel property for each
+        //we will replace the "MakeModel" now that it is private
+        Console.WriteLine("----------------------");
+        Console.WriteLine(automobile.GetMakeModel());//these lines give all the automobile info to the user
+        Console.WriteLine(automobile.GetMiles() + " miles");
+        Console.WriteLine("$" + automobile.GetPrice());
       }
     }
   }
+
 }

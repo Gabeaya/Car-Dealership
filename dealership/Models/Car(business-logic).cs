@@ -2,24 +2,47 @@ using System; //directs C# to provide specific code to run functions in our appl
 // using System.Collections.Generic; //? I believe this directs our program to understand that we will be using an array,object, or list
 //we comment out line 2 becuase Car.cs doesnt contain list objects
 
-namespace Dealership.Models//name it by the folder it is in 
+namespace Dealership.Models//name it by the folder it is in then we use models for the BL because it models the format of the objects
 {
   public class Car // class declares Car as a class, Which is always in UpperCamelCase
   {//always format the curly braces under the class
-    public string MakeModel; //these variables are known as fields 
-    public int Price;//fields are any variable declared within a class
-    public int Miles;//fields are written in PascalCase
+    //public string MakeModel; //these variables are known as fields 
+    //public int Price;//fields are any variable declared within a class
+    //public int Miles;//fields are written in PascalCase
+    // update our fieds to be privat
+    private string _makeModel; //now that the variables are private
+    private int _price;// we denote with camelCase and an underscore
+    private int _miles;
 
     public Car(string makeModel, int price, int miles)// we should name our constructor the same as the class its called on. our constructor containes multiple parameters
     {// our parameters correspond to the Car fields and they include a preceding type
-      MakeModel = makeModel; // we set the object fields equal to the parameters
-      Price = price;//note the fields are PascalCase 
-      Miles = miles;// note the parameters are lowerCamelCase
+      _makeModel = makeModel; // we set the object fields equal to the parameters
+      _price = price;//note the fields are PascalCase 
+      _miles = miles;// note the parameters are lowerCamelCase
     }//this constructor will return a new instance of Car
     //The purpose of using a constructor is to refactor our Program class
+    
+    public void SetPrice(int newPrice) //this method will set discounted prices during sales for particluar cars
+    {//we name is public so it can be publically accessed and denote void because it doesnt return a value
+      _price = newPrice; //we set the argument as the new automobile price
+    }
+    public string GetMakeModel()//this allows to make the returned variable publicly available but prevents it from being exposed
+    {
+      return _makeModel;
+    }
+    //below we add more get methods for the remaining variables
+    public int GetPrice()
+    {
+      return _price;
+    }
+
+    public int GetMiles()
+    {
+      return _miles;
+    }
     public bool WorthBuying(int maxPrice)// firstly we define type, bool, then delcar it only takes one argument
     {//methods within the class can only be called on said class
-      return (Price <= maxPrice); //our method returns whether true or false if the price is or isnt less/equal to the users maxprice
+      return (_price <= maxPrice); //our method returns whether true or false if the price is or isnt less/equal to the users maxprice
     }
   }//they are not properties but are exposed like properties with the public access modifier..this will change to private soon enough
 
